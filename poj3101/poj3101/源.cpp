@@ -61,6 +61,7 @@ struct INT {
 		if (len) len--;
 		return *this;
 	}
+
 	inline INT &operator =(long long x) {
 		len = 0; sign = false;
 		memset(num, 0, sizeof num);
@@ -270,6 +271,8 @@ void get_prime(int k) {
 	}
 }
 
+
+
 int main() {
 	//ios_base::sync_with_stdio(false); cin.tie(0);
 	int n;
@@ -289,6 +292,7 @@ int main() {
 			get_prime(b);
 		}
 		INT ans = 1LL;
+		
 		f(i, 2, SIZE)
 			while (G[i]--) {
 				ans *= i;
