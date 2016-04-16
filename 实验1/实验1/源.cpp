@@ -38,8 +38,7 @@ void preorderTraversal(bintree bt) {
 }
 bintree insert(int x, bintree bt) {
 	if (!bt) {
-		bt = new struct treenode;
-		//bt = (bintree)malloc(sizeof(struct treenode));
+		bt = (bintree)malloc(sizeof(struct treenode));
 	
 		if (bt)
 			bt->data = x;
