@@ -26,64 +26,13 @@ typedef long double ld;
 const ld PI = acos(-1.0);
 
 using namespace std;
-
-#define LEN 500
-#define MOD 10000
-
 #define SIZE ( )
 
-char s[100];
-ll p;
-ll mul(ll a, ll b,ll p) {
-	ll res = 0;
-	while (b) {
-		if (b & 1) res = (res + a) % p;
-		a = (a + a) % p;
-		b >>= 1;
-	}
-	return res;
-}
+vector<char> op;
+int p, m;
+
+vector<int> ps, ms;
 
 int main() {
-	//ios_base::sync_with_stdio(false); cin.tie(0);
-
-	int T;
-	scanf("%d", &T);
-	int i;
-	while (T--) {
-		ll q;
-		scanf("%I64d%I64d", &q, &p);
-		
-		if (q < 3)
-			printf("0\n");
-		else {
-			ll a = q - 2, b = q - 1;
-			if (a % 2 == 0)
-				a /= 2;
-			else 
-				b /= 2;
-			printf("%I64d\n",mul(a,b,p));
-		}
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	return 0;
+	
 }
