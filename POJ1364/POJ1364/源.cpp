@@ -55,7 +55,7 @@ int d[30000 + 10];
 Edge1 a;
 
 int Bllman(int n) {
-	mm(d); d[0] = 0;
+	m0(d); d[0] = 0;
 	int i, j;
 	f(i, 1, n) {
 		int ok = 0;
@@ -83,15 +83,12 @@ int main() {
 		f(i, 1, m) {
 			scanf("%d %d %s %d", &u, &v, s, &w);
 			if (s[0] == 'g')
-				a.push_back(u + v + 1, u, -w - 1);
+				a.push_back(u + v, u-1, -w - 1);
 			else
-				a.push_back(u, u + v + 1, w - 1);
+				a.push_back(u-1, u + v, w - 1);
 		}
-		//d[i] - d[0] >= 0
-		f(i, 1, n + 1)
-			a.push_back(i, 0, 0);
 
-		if (Bllman(n + 2))
+		if (Bllman(n+1))
 			printf("lamentable kingdom\n");
 		else
 			printf("successful conspiracy\n");
